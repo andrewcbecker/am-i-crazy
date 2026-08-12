@@ -1,0 +1,4 @@
+interface:
+  display_name: "Am I Crazy?"
+  short_description: "Audit claims before a chat or repo drifts off course"
+  default_prompt: "Use $am-i-crazy to audit this chat or repository for unsupported, contradicted, stale, or invented claims."
