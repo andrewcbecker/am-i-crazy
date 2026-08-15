@@ -1,0 +1,6 @@
+{
+  "session_id": "fixture-backed",
+  "transcript_path": "/Volumes/BRAIN2/Projects/TMP/am-i-crazy/hooks/scripts/fixtures/backed.transcript.jsonl",
+  "hook_event_name": "Stop",
+  "last_assistant_message": "All 23/23 tests pass, this is fixed and verified."
+}
