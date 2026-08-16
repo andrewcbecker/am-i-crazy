@@ -1,0 +1,6 @@
+{
+  "session_id": "fixture-no-claim",
+  "transcript_path": "unbacked.transcript.jsonl",
+  "hook_event_name": "Stop",
+  "last_assistant_message": "Here is what I found in src/foo.js."
+}

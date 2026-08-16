@@ -1,0 +1,6 @@
+{
+  "session_id": "fixture-stale",
+  "transcript_path": "stale.transcript.jsonl",
+  "hook_event_name": "Stop",
+  "last_assistant_message": "Done, this is fixed and verified, tests pass."
+}

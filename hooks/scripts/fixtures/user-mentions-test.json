@@ -1,0 +1,6 @@
+{
+  "session_id": "fixture-user-mentions-test",
+  "transcript_path": "user-mentions-test.transcript.jsonl",
+  "hook_event_name": "Stop",
+  "last_assistant_message": "Done, fixed and verified, tests pass."
+}

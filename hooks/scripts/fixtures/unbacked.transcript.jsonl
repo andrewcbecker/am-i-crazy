@@ -1,3 +1,3 @@
-{"type":"tool_use","name":"Read","input":{"file_path":"src/foo.js"}}
-{"type":"tool_result","content":"function foo() { return 1; }"}
-{"type":"assistant","content":"Fixed the bug and verified it works now, tests pass."}
+{"type":"user","message":{"role":"user","content":"foo() returns the wrong value, fix it"}}
+{"type":"assistant","message":{"role":"assistant","content":[{"type":"tool_use","name":"Read","input":{"file_path":"src/foo.js"}}]}}
+{"type":"user","message":{"role":"user","content":[{"type":"tool_result","content":"function foo() { return 1; }"}]}}

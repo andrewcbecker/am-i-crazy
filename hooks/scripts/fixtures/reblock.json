@@ -1,6 +1,7 @@
 {
-  "session_id": "fixture-unbacked",
+  "session_id": "fixture-reblock",
   "transcript_path": "unbacked.transcript.jsonl",
   "hook_event_name": "Stop",
+  "stop_hook_active": true,
   "last_assistant_message": "Fixed the bug and verified it works now, tests pass."
 }

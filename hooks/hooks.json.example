@@ -1,9 +1,8 @@
 {
-  "description": "am-i-crazy: F4 completion-claim guard. Fires on every Stop event and flags completion language (\"tests pass\", \"fixed\", \"verified\", a suspicious pass-count like a claimed count higher than the transcript's actual tool output) that has no matching tool-output evidence earlier in the same turn. This file is opt-in: it ships as hooks.json.example and is inert until you copy it to hooks/hooks.json (see README.md 'The Stop hook'). Once active, an unbacked completion claim exits 2, which Claude Code's Stop event treats as an unconditional block on ending the turn -- this is a hard stop, not a soft annotation.",
+  "description": "am-i-crazy: F4 completion-claim guard. Fires on every Stop event and flags completion language (\"tests pass\", \"fixed\", \"verified\", a claimed pass count) that has no matching test/build/deploy tool-output in the same turn. Stop takes no matcher -- it always fires. This file is opt-in: it ships as hooks.json.example and is inert until you copy it to hooks/hooks.json (see README.md 'The Stop hook'). Once active, an unbacked completion claim returns a Stop block decision, which prevents Claude from ending the turn until it verifies or explains -- a hard stop, not a soft annotation.",
   "hooks": {
     "Stop": [
       {
-        "matcher": "*",
         "hooks": [
           {
             "type": "command",

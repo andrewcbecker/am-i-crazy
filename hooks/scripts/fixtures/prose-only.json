@@ -1,0 +1,6 @@
+{
+  "session_id": "fixture-prose-only",
+  "transcript_path": "prose-only.transcript.jsonl",
+  "hook_event_name": "Stop",
+  "last_assistant_message": "Fixed and verified, tests pass."
+}

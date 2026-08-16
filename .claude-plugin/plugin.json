@@ -3,7 +3,7 @@
   "description": "Audit visible chat history, status reports, or a repository for unsupported, contradicted, stale, fabricated, or overclaimed assertions.",
   "version": "0.1.0",
   "author": {
-    "name": "Andrew Becker"
+    "name": "Andrew C. Becker"
   },
   "license": "MIT"
 }

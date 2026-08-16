@@ -9,15 +9,12 @@ Evidence over confidence. Read-only by default. `unsupported` is never treated a
 ## Install
 
 ```
+git clone https://github.com/<owner>/am-i-crazy
 claude --plugin-dir /path/to/am-i-crazy
 ```
 
-Or, once published to a marketplace:
-
-```
-/plugin marketplace add <marketplace-name>
-/plugin install am-i-crazy@<marketplace-name>
-```
+`--plugin-dir` is the only supported install path today. This repo does not ship a
+marketplace manifest, so `/plugin marketplace add` is not available for it yet.
 
 ## What it does
 
@@ -69,6 +66,12 @@ cp hooks/hooks.json.example hooks/hooks.json
 
 To turn it back off, delete or rename `hooks/hooks.json` again — there is no separate settings
 flag needed since the plugin only registers the hook when that exact file is present.
+
+The guard is deliberately conservative in one direction: it only looks at `tool_use` /
+`tool_result` entries after the last real user prompt (so the model can't back its own claim by
+*mentioning* a test command), and it stays quiet whenever it can't actually assess the turn —
+no readable transcript, no recognized runner, or a turn it has already nudged once. It is a
+heuristic, not a proof: it will miss unbacked claims, and that is the intended trade.
 
 If you never create `hooks/hooks.json`, the Stop hook never runs — you get only the on-demand
 `/am-i-crazy` skill and the `test-verifier` subagent (invocable directly), matching the plugin's
